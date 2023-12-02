@@ -9,4 +9,4 @@
        macro avg       0.80      0.77      0.78       172
     weighted avg       0.93      0.93      0.93       172
 
-Data provided by Kaggle: [https://www.kaggle.com/datasets/loveall/cervical-cancer-risk-classification/data](url)
+Data provided by Kaggle: [https://www.kaggle.com/datasets/loveall/cervical-cancer-risk-classification/data](https://www.kaggle.com/datasets/loveall/cervical-cancer-risk-classification/data)
