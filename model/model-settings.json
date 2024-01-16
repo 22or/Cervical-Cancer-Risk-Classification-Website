@@ -1,0 +1,7 @@
+{
+	"name": "risk-model",
+	"implementation": "mlserver_xgboost.XGBoostModel",
+	"parameters": {
+		"uri": "./model.json"
+	}
+}
