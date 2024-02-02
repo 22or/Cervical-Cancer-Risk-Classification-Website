@@ -39,4 +39,7 @@ class AssessmentForm(forms.Form):
 	hpv = forms.BooleanField(required=False)
 	number_of_diagnosis  = forms.IntegerField()
 	cervical_dysplasia_diagnosis = forms.BooleanField(required = False)
+	dx = forms.BooleanField(required = False)
 	hpv_diagnosis = forms.BooleanField(required = False)
+	diagnosis = forms.IntegerField()
+	citology = forms.BooleanField(required = False)
