@@ -1,0 +1,14 @@
+html {
+	margin: 0;
+	min-height: 100vh;
+}
+
+body {
+	margin: 0 !important;
+	height: 100vh !important;
+	background-color: #1f8dd6;
+}
+
+.asteriskField {
+    display: none;
+}

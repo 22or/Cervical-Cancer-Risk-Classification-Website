@@ -1,5 +1,20 @@
 {% extends 'base.html' %}
+{% load static %}
+{% block header %}
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/purecss@3.0.0/build/pure-min.css" integrity="sha384-X38yfunGUhNzHpBaEBsWLO+A0HDYOQi8ufWDkZ0k9e0eXz/tH3II7uKZ9msv++Ls" crossorigin="anonymous">
+	<link rel="stylesheet" href="{% static 'index.css' %}">
+{% endblock header %}
 {% block content %}
-	<p>lorem ipsum</p>
-	<a href={% url 'assessment' %}>Take the assessment</a>
+	<div class="splash-container">
+		<div class="splash">
+			<h1 class="splash-head">Cervical Cancer Risk Assessment</h1>
+			<p class="splash-subhead">
+				This assessment uses a classification machine learning model to determine whether you're at risk of having cervical cancer.
+			</p>
+			<p>
+				<a href={% url 'assessment' %} class="pure-button pure-button-primary">Take the assessment</a>
+			</p>
+		</div>
+	</div>
+	
 {% endblock content %}

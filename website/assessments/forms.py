@@ -1,15 +1,26 @@
 from django import forms
+from crispy_forms.helper import FormHelper
+from crispy_forms.layout import Submit
 
 class AssessmentForm(forms.Form):
+	def __init__(self, *args, **kwargs):
+		super().__init__(*args, **kwargs)
+		self.helper = FormHelper(self)
+		self.helper.label_class = 'col-lg-2'
+		self.helper.field_class = 'col-lg-8'
+		self.helper.form_class= 'form-horizontal'
+		self.helper.form_method = 'post'
+		self.helper.add_input(Submit('submit','Submit'))
+	
 	age = forms.IntegerField()
 	number_of_sexual_partners = forms.IntegerField()
 	first_sexual_intercourse = forms.IntegerField()
 	num_of_pregnancies = forms.IntegerField()
 	smokes = forms.BooleanField(required=False)
-	smokes_years = forms.IntegerField()
+	years_of_smoking = forms.IntegerField()
 	smokes_packs_per_year = forms.IntegerField()
 	hormonal_contraceptives = forms.BooleanField(required=False)
-	hormonal_contraceptives_years = forms.IntegerField()
+	years_of_hormonal_contraceptives = forms.IntegerField()
 	iud = forms.BooleanField(required=False)
 	iud_years = forms.IntegerField()
 	stds = forms.BooleanField(required=False)
@@ -27,5 +38,5 @@ class AssessmentForm(forms.Form):
 	hepatitis_b = forms.BooleanField(required=False)
 	hpv = forms.BooleanField(required=False)
 	number_of_diagnosis  = forms.IntegerField()
-	dx_cin = forms.BooleanField(required = False)
-	dx_hpv = forms.BooleanField(required = False)
+	cervical_dysplasia_diagnosis = forms.BooleanField(required = False)
+	hpv_diagnosis = forms.BooleanField(required = False)
