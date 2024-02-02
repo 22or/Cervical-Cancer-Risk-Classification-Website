@@ -39,7 +39,10 @@ class AssessmentFormView(FormView):
 		r = requests.post('http://0.0.0.0:8080/v2/models/risk-model/infer',json = model_request)
 		# return HttpResponse(r.json().get('outputs')[0].get('data')[1])
 		
-		return HttpResponseRedirect(self.success_url + '?result=' + str(r.json().get('outputs')[0].get('data')[1]))
+		return HttpResponseRedirect(self.success_url + '?result=' + str(round(100 * r.json().get('outputs')[0].get('data')[1])))
 	
 def results(request):
-	return HttpResponse(request.GET.get('result'))
+	context = {
+		'result': request.GET.get('result')
+	}
+	return render(request,'assessments/results.html',context)
