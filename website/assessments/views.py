@@ -6,6 +6,7 @@ import requests
 from . import forms
 import numpy
 import pandas
+import math
 
 # Create your views here.
 def index(request):
@@ -19,7 +20,11 @@ class AssessmentFormView(FormView):
 	def form_valid(self,form):
 		individual = []
 		for key in form.cleaned_data:
-			individual.append(form.cleaned_data[key])
+			value = form.cleaned_data[key]
+			if (key == 'first_sexual_intercourse_age' or key == 'age'):
+				value = math.ceil((value - 9) / 5)
+			
+			individual.append(value)
 		individual = pandas.DataFrame([individual]).values
 		model_request = {
 			'inputs': [
