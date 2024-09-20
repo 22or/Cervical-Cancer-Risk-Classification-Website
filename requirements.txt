@@ -28,6 +28,7 @@ gevent==23.9.1
 geventhttpclient==2.0.2
 greenlet==3.0.3
 grpcio==1.60.1
+gunicorn==23.0.0
 h11==0.14.0
 idna==3.6
 imbalanced-learn==0.12.0
