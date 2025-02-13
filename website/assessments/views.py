@@ -41,7 +41,7 @@ class AssessmentFormView(FormView):
 				{'name': 'predict_proba'}
 			]
 		}
-		r = requests.post('http://0.0.0.0:8080/v2/models/risk-model/infer',json = model_request)
+		r = requests.post('http://0.0.0.0:8888/v2/models/risk-model/infer',json = model_request)
 		# return HttpResponse(r.json().get('outputs')[0].get('data')[1])
 		
 		return HttpResponseRedirect(self.success_url + '?result=' + str(round(1000 * r.json().get('outputs')[0].get('data')[1]) / 10))
