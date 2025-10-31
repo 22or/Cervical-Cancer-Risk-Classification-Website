@@ -168,16 +168,4 @@ Contributions are welcome! Please feel free to submit a Pull Request.
 4. Push to the branch (`git push origin feature/AmazingFeature`)
 5. Open a Pull Request
 
-## Contact
-
-For questions or suggestions, please open an issue on GitHub.
-
-## Acknowledgments
-
-- Kaggle for providing the dataset
-- Hospital Universitario de Caracas for the original data collection
-- The open-source community for Django, MLServer, and XGBoost
-
----
-
 **Note**: Ensure both MLServer and Django development server are running simultaneously for the application to function properly.
